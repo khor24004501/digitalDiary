@@ -29,7 +29,9 @@ public class Create {
     
     @FXML
     private void onCreateButtonClick(){
-        //get input values
+        
+        filePath = new File("src/assignmentcreateedit/entry.csv").getAbsolutePath();
+        
         if (titleField.getText().isEmpty() || contentField.getText().isEmpty()){
             showAlert("Incomplete","Please fill in the required fields.",Alert.AlertType.ERROR);
             return;
